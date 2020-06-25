@@ -1,0 +1,47 @@
+import random
+l1=[]
+l2=[]
+for i in range(1,200):
+    x=random.randint(1,200)
+    #print(x)
+    l1.append(x)
+    if i==1:
+        l2.append(x)
+    k=len(l1)
+    l=len(l2)
+    if(i>1):
+        if abs(l2[l-1]-x)==50:
+            l2.append(x)
+print(l1)
+print(l2)
+
+
+import math
+def area_of_circle(r):
+    a=math.pi * r**2
+    print("area of circle is",a)
+r=float(input('enter the radius'))
+area_of_circle(r)
+
+import math
+n= int(input("Input number of sides: "))
+s= float(input("Input the length of a side: "))
+p_area = n * (s** 2) / (4 * math.tan(math.pi / n))
+print("The area of the polygon is: ",p_area)
+
+import random
+l1=[100,1,2,3,30,40,"hai","hello"]
+random.shuffle(l1)
+print(l1)
+
+import math   
+pi = math.pi
+def area_of_segment(radius, angle): 
+    area_of_sector = pi * (radius * radius) * (angle / 360) 
+    area_of_triangle = 1 / 2 * (radius * radius) *math.sin((angle * pi) / 180) 
+    return area_of_sector - area_of_triangle; 
+radius = float(input("radius:"))
+angle = float(input("angle:"))
+print("Area of minor segment =", area_of_segment(radius, angle)) 
+print("Area of major segment =", area_of_segment(radius, (360 - angle)))
+
